@@ -1,9 +1,10 @@
 import React from "react";
-import spaceXLogo from "../../../assets/spacex-logo.png";
+import spaceXLogo from "../../assets/spacex-logo.png";
+import "./Logo.css";
 
 const Logo = () => (
-  <div className="logo">
-    <img src={spaceXLogo} alt="SpaceXLogo" />
+  <div>
+    <img src={spaceXLogo} class="logo" alt="SpaceXLogo" />
   </div>
 );
 
