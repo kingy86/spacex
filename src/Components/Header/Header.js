@@ -9,7 +9,7 @@ import { Button } from "react-bulma-components";
 const Header = (props) => (
   <div>
     <Logo />
-    <Button color="danger" rounded>
+    <Button color="danger" size="small">
       Reload Data <img src={refreshIcon} alt="refreshIcon" />
     </Button>
   </div>
