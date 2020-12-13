@@ -4,20 +4,19 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 import Header from "../../Components/Header/Header";
 import Layout from "../../Components/Layout/Layout";
 
-let SpacexApiWrapper = require("spacex-api-wrapper");
+import { SpaceX } from "spacex-api";
 
 class MainContainer extends Component {
-  state = {};
-
   render() {
-    SpacexApiWrapper.getAllLaunches()
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log("Error ", error);
-      });
+    let state = {
+      spaceLaunches: [],
+    };
 
+    SpaceX.getAllLaunches().then((data) =>
+      data.forEach((launch) => {
+        this.setState({ spaceLaunches: launch });
+      })
+    );
     return (
       <Container>
         <Header />
