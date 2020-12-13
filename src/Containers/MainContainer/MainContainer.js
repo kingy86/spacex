@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Aux from "../../HOC/Aux";
+import { Container } from "react-bulma-components";
+import "react-bulma-components/dist/react-bulma-components.min.css";
 import Header from "../../Components/Header/Header";
 import Layout from "../../Components/Layout/Layout";
 
@@ -16,10 +17,10 @@ class MainContainer extends Component {
       });
 
     return (
-      <Aux>
+      <Container>
         <Header />
         <Layout />
-      </Aux>
+      </Container>
     );
   }
 }
