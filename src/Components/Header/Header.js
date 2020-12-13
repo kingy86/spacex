@@ -7,7 +7,7 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 import { Button } from "react-bulma-components";
 
 const Header = (props) => (
-  <div>
+  <div className="header">
     <Logo />
     <Button color="danger" size="small">
       Reload Data <img src={refreshIcon} alt="refreshIcon" />
