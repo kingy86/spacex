@@ -4,7 +4,7 @@ import RocketImage from "../RocketImage/RocketImage";
 import LaunchFeature from "../LaunchFeature/LaunchFeature";
 import "./Layout.css";
 
-const Layout = () => (
+const Layout = (props) => (
   <div className="layout">
     <Columns>
       <Columns.Column>

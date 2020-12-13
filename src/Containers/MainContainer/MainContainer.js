@@ -7,6 +7,8 @@ import Layout from "../../Components/Layout/Layout";
 let SpacexApiWrapper = require("spacex-api-wrapper");
 
 class MainContainer extends Component {
+  state = {};
+
   render() {
     SpacexApiWrapper.getAllLaunches()
       .then((data) => {
