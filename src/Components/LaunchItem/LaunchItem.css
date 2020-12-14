@@ -1,0 +1,14 @@
+.launch-item {
+  margin: 10px 0;
+  box-shadow: 2px 5px 5px lightgrey;
+  border-radius: 5px;
+}
+
+.launch-item h1 {
+  font-size: 1.6em;
+  margin: 0 3px;
+}
+
+.launch-title {
+  display: flex;
+}
