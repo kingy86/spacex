@@ -12,7 +12,6 @@ class MainContainer extends Component {
   };
 
   getData = () => {
-    console.log("FuCK the Hearts!!");
     SpaceX.getAllLaunches().then((launch) =>
       this.setState({ spaceLaunches: [...launch] })
     );

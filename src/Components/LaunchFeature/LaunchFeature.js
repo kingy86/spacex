@@ -5,11 +5,11 @@ import LaunchList from "../LaunchList/LaunchList";
 
 const LaunchFeature = (props) => (
   <div className="launch-feature">
-    <Filter />
-    <LaunchList />
-    {props.data.map((flight) => (
+    <Filter launchYear={props.data.launch_year} />
+    <LaunchList launchInfo={props.data} />
+    {/* {props.data.map((flight) => (
       <h1>{flight.mission_name}</h1>
-    ))}
+    ))} */}
   </div>
 );
 
