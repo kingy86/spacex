@@ -11,7 +11,7 @@ const Layout = (props) => (
         <RocketImage />
       </Columns.Column>
       <Columns.Column>
-        <LaunchFeature />
+        <LaunchFeature data={props.data} />
       </Columns.Column>
     </Columns>
   </div>

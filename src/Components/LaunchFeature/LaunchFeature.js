@@ -3,10 +3,13 @@ import "./LaunchFeature.css";
 import Filter from "../Filter/Filter";
 import LaunchList from "../LaunchList/LaunchList";
 
-const LaunchFeature = () => (
+const LaunchFeature = (props) => (
   <div className="launch-feature">
     <Filter />
     <LaunchList />
+    {props.data.map((flight) => (
+      <h1>{flight.mission_name}</h1>
+    ))}
   </div>
 );
 
