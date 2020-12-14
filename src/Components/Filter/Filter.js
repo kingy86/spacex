@@ -7,10 +7,10 @@ import "./Filter.css";
 
 const Filter = (props) => (
   <div className="filter">
-    <Button color="danger">
+    <Button color="info">
       Sort Descending <img src={sortIcon} alt="sortIcon" />
     </Button>
-    <Dropdown label="Filter By Year"></Dropdown>
+    <Dropdown label="Filter By Year" color="info"></Dropdown>
   </div>
 );
 
