@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { useState, useEffect } from "react";
 import { Container } from "react-bulma-components";
 import "react-bulma-components/dist/react-bulma-components.min.css";
 import Header from "../../Components/Header/Header";
@@ -6,29 +6,26 @@ import Layout from "../../Components/Layout/Layout";
 
 import { SpaceX } from "spacex-api";
 
-class MainContainer extends Component {
-  state = {
-    spaceLaunches: [],
+const MainContainer = () => {
+  // state = {
+  //   spaceLaunches: [],
+  // };
+  const [spaceLaunches, setSpaceLaunches] = useState([]);
+
+  const getData = () => {
+    SpaceX.getAllLaunches().then((launch) => setSpaceLaunches([...launch]));
   };
 
-  getData = () => {
-    SpaceX.getAllLaunches().then((launch) =>
-      this.setState({ spaceLaunches: [...launch] })
-    );
-  };
+  useEffect(() => {
+    getData();
+  });
 
-  componentDidMount() {
-    this.getData();
-  }
-
-  render() {
-    return (
-      <Container>
-        <Header />
-        <Layout data={this.state.spaceLaunches} />
-      </Container>
-    );
-  }
-}
+  return (
+    <Container>
+      <Header />
+      <Layout data={spaceLaunches} />
+    </Container>
+  );
+};
 
 export default MainContainer;
